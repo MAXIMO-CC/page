@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../imagenes/yellow_esport_background_04.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+}
+
+header{
+    
+    width: 100%;
+    height: 100px;
+    background: black;
+    padding: 0 50px 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: yellow 0 0 20px;
+
+}
+.logo{
+    text-transform: uppercase;
+    color:#FFC300;
+    text-shadow: 0 0 10px #FFC300;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-weight: 200;
+    letter-spacing: 3px;
+    filter: drop-shadow(0 0 10px #FFC300);
+    
+    margin: auto;
+    animation: texto 2s 2s infinite running ;
+    
+}
+
+@keyframes texto{
+    0% {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    50%{
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+
+    100%{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+
+#trans{
+    
+    height: 30px;
+    border-radius: 20px;
+    padding-left: 10px;
+    font-family: cursive;
+    background-color: transparent;
+    color: white;
+
+}
+
+option {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-family: cursive;
+}
+
+.logo-png{
+    filter: invert(100%);
+    width: 130px;
+    margin-left: -70px, 70px ;
+
+}
+
+.menu a{
+    color: white;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-decoration: none;
+    padding: 15px 0px;
+    margin-right: 20px;
+    transition: ease-in 0.5s;
+    animation: expandLine 2s ease-in-out infinite alternate;
+    position: relative;
+    /*transicion*/
+}
+
+.menu a::before{
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #FFC300;
+    bottom: -3px;
+    width: 90%;
+    left: 0;
+    transition: 0.2s;
+    opacity: 0;
+    
+
+}
+
+.menu a::after{
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #FFC300;
+    bottom: 2px;
+    width: 60%;
+    right: 0;
+    opacity: 0;
+    transition: 0.2s;
+
+}
+
+.menu a:hover::before{
+    opacity: 1;
+    width: 30%;
+}
+
+.menu a:hover::after{
+    opacity: 1;
+    width: 90%;
+}
+
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s; 
+
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: #FFC300;
+
+}
+
+#check{
+    display: none;
+}
+
+
+.card{
+    margin-top: 150px;
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin-right: 40px;
+    background-size: cover;
+    transform-style: preserve-3d;
+    
+}
+
+.card .face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 0px 10px yellow,
+    0 0px 20px yellow,
+    0 0px 20px yellow;
+}
+
+.card .front:hover {
+    transform: perspective(500px) rotateX(55deg);
+    box-shadow: 0 0px 10px yellow,
+                0 0px 20px yellow,
+                0 0px 20px yellow;
+}
+
+
+
+.card  img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center center;
+     /* Esto corrige la inclinación */
+}
+
+.card .front img:hover{
+    transform: perspective(500px) skewY(120deg) translateY(50px);
+}
+
+
+.card .front h3{
+position: absolute;
+bottom: 0; 
+width: 100%;
+height: 60px;
+line-height: 45px;
+color: white;
+background: rgba(0,0,0,.4);
+text-align: center;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.card .front a{
+    color: white;
+    position: absolute;
+    margin-top: 319px;
+    margin-left: 118px;
+    text-decoration: none;
+}
+
+
+@media(max-width: 770px){
+    /*header*/
+
+    .esconder-menu1 {
+        display: block; /* O flex si prefieres que sea flexible */
+        margin-top: 20px;
+    }
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+        margin-top: 20px;
+        
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(0, 0, 0);
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index:100 ;
+        transition: 0.8s;
+        overflow-y: auto;
+        
+
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+
+    }
+
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right:40px ;
+        
+    }
+
+    .menu a::before,
+    .menu a::after,
+    .mostrar-menu,
+    .esconder-menu{
+        border-bottom: none;
+    }
+
+  
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    #contenido-iconos{
+        flex-direction: column;
+    }
+
+    .card{
+        flex-direction: column;
+    }
+
+}

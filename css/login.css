@@ -1,0 +1,340 @@
+
+    body {
+        background: url(../imagenes/bar.jpg); /* ruta actualizada si el CSS está en carpeta css/ */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+/*LOGIN ------------------------------------------------------------------------*/
+
+.contenido{
+    display: flex;
+    justify-content: center;
+    margin-left: 150px;
+    margin-top: 100px;
+    width: 1200px;
+    height: 550px;
+    padding-top: 50px;
+    background: transparent;
+    animation: sombras 3s 0.5s infinite running ;
+    gap: 20px;
+    transition: 0.7s ease-in-out;
+    border-radius: 50px;
+    
+}
+
+.contenido:hover{
+       transition: 0.7s ease-in-out;
+       background: rgba(0, 0, 0, 0.7);
+
+    
+}
+
+
+
+@keyframes sombras{
+    0%{
+        box-shadow: 0px 0px 20px purple;
+    }
+
+    20%{
+        box-shadow: -10px -12px 20px red;
+    }
+
+    40%{
+        box-shadow: 12px -10px 20px orange;
+    }
+
+    60%{
+        box-shadow: 12px 15px 20px yellow;
+    }
+
+    80%{
+        box-shadow: -12px 10px 20px purple;
+    }
+
+    100%{
+        box-shadow: 0px 0px 20px greenyellow;
+    }
+}
+
+/*PARTE 1---------------------------------------------------------------------*/
+
+.contenido .parte1{
+    width: 500px;
+    height: 480px;
+    background: transparent;
+}
+
+.contenido .parte1 h2{
+    color: white;
+    text-shadow: 0 0 10px white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+
+.contenido .parte1 .cont{
+    padding-left: 40px;
+    background: transparent;
+}
+
+.contenido .parte1 .img1{
+    filter: invert(100%);
+    margin-right: 20px;
+    width: 25px;
+} 
+
+.contenido .parte1 .recuadro{
+    background: transparent;
+    border: 2px solid white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 90px;
+    border-radius: 15px;
+    margin-bottom: 14px;
+}
+
+
+
+input.recuadro::placeholder {
+    color: white;
+    font-size: 18px;
+}
+
+input{
+    color: white;
+    font-size: 18px;
+}
+
+
+.contenido .cont button{
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-inline: 40px;
+    font-size: 20px;
+    margin-left: 135px;
+    border-radius: 20px 75px 30px 60px;
+    transition: 0.4s;
+}
+
+.contenido .cont button:hover{
+    transform: scale(1.1) rotate(360deg);
+    transition: 0.4s;
+    box-shadow: 0 0 12px #f5f5f5;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    box-shadow: 0 10px 8px purple;
+}
+
+
+
+
+
+
+/*PARTE 2---------------------------------------------------------------------*/
+
+.contenido .parte2{
+    width: 500px;
+    height: 480px;
+    background: transparent;
+}
+
+.contenido .parte2 h2{
+    color: white;
+    text-shadow: 0 0 10px white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+
+
+.contenido .parte2 .cont1{
+    padding-left: 40px;
+    background: transparent;
+}
+
+.contenido .parte2 .img1{
+    filter: invert(100%);
+    margin-right: 20px;
+    width: 25px;
+} 
+
+.contenido .parte2 .recuadro{
+    background: transparent;
+    border: 2px solid white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 90px;
+    border-radius: 15px;
+    margin-bottom: 34px;
+}
+
+
+
+input.recuadro::placeholder {
+    color: white;
+    font-size: 18px;
+}
+
+
+.contenido .cont1 button{
+    background:transparent;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-inline: 40px;
+    font-size: 20px;
+    margin-left: 135px;
+    border-radius: 20px 75px 30px 60px;
+    transition: 0.4s;
+    margin-top: 50px;
+}
+
+.contenido button:hover{
+    transform: scale(1.1) rotate(3deg);
+    transition: 0.4s;
+    box-shadow: 0 0 12px #f5f5f5;
+}
+
+
+/*resposive 1280 ------------------------------------------*/
+
+@media (max-width: 1280px) {
+    .contenido{
+        margin-right: 50px;
+        margin-left: 60px;
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .contenido .parte1{
+        width: auto;
+        height: auto;
+        
+    }
+
+    .contenido .parte1{
+        width: auto;
+        height: auto;
+    }
+
+    .contenido .cont .recuadro{
+        width: auto;
+        padding-right: 0;
+    }
+
+
+    /*parte 2--------------------------------*/
+
+    .contenido .parte2{
+        width: auto;
+        height: auto;
+    }
+
+    .contenido .parte2{
+        width: auto;
+        height: auto;
+    }
+
+    .contenido .cont1 .recuadro{
+        width: auto;
+        padding-right: 0;
+    }
+
+    .contenido .cont button{
+        margin-left: 78px ;
+    }
+
+    .contenido .cont1 button{
+        margin-left: 78px ;
+        margin-top: -70px;
+    }
+
+}
+
+
+/*responsive 960-------------------------------------------*/
+
+@media (max-width: 960px) {
+    .contenido{
+        margin-right: 50px;
+        margin-left: 60px;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .contenido .parte1{
+        width: auto;
+        height: auto;
+    }
+
+    .contenido .parte1{
+        width: auto;
+        height: auto;
+    }
+
+    .contenido .cont .recuadro{
+        width: auto;
+        padding-right: 0;
+    }
+
+
+    /*parte 2--------------------------------*/
+
+    .contenido .parte2{
+        width: auto;
+        height: auto;
+    }
+
+    .contenido .parte2{
+        width: auto;
+        height: auto;
+    }
+
+    .contenido .cont1 .recuadro{
+        width: auto;
+        padding-right: 0;
+    }
+
+    .contenido .cont button{
+        margin-left: 78px ;
+    }
+
+    .contenido .cont1 button{
+        margin-left: 78px ;
+        margin-top: -70px;
+        margin-bottom: 22px;
+    }
+
+}
+
+
+@keyframes square-in-center {
+    from {
+      clip-path: inset(100% 100% 100% 100%);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+ 

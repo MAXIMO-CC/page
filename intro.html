@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro con Jazz</title>
+  <link rel="stylesheet" href="css/intro.css">
+  <link rel="stylesheet" href="https://unpkg.com/transition-style">
+</head>
+<body>
+
+  <body>
+
+    <!-- Fondo con animación -->
+   <!-- Fondo animado con partículas + transición -->
+<div id="fondo-particles" class="transition transition--in:circle:hesitate"></div>
+<div class="hola"></div>
+
+  
+    <!-- Contenido del login -->
+    <div class="todo">
+      <div class="carta scale-out-ver-bottom">
+        <div class="icono">
+          <lottie-player src="imagenes/Open Door.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
+        </div>
+        <h1>52</h1>
+        <span>BILLAR</span>
+        <h3>Bar Local con Musica <br> en Vivo</h3>
+        <div class="link-container">
+          <a href="http://localhost/pagina_principal/index.php" class="link-text">Por favor registrate Aquí</a>
+          <div class="trapecio"></div>
+        </div>
+        <span class="linea"></span>
+        <h5>Puerto Salgar Cundinamarca 2025</h5>
+      </div>
+    </div>
+  
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("fondo-particles", {
+    "particles": {
+      "number": {
+        "value": 60
+      },
+      "size": {
+        "value": 3
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        }
+      }
+    }
+  });
+</script>
+  </body>
+  
+</body>
+</html>
